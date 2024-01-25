@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Hex Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="btn">
+         <button id="NewCol">Generate Random Hex Code</button> 
+         <span id="color"></span> </div>
+    <script>
+        const changeBg = () => {
+            const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+            document.body.style.backgroundColor = "#" + randomColor;
+            color.innerHTML = "#" + randomColor;
+        }
+        NewCol.addEventListener("click", changeBg);
+        changeBg();
+    </script>
+</body>
+
+</html>
